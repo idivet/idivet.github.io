@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antony Ancil — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #161b25;
+      --card: #1c2333;
+      --accent: #c8a96e;
+      --accent2: #7eb8c9;
+      --text: #e8e4da;
+      --muted: #8a8c95;
+      --border: #2a3040;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.8; }
+
+    /* LANG BAR */
+    .lang-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(14,17,23,.93);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: .65rem 1.5rem;
+      display: flex; align-items: center; justify-content: flex-end; gap: .8rem;
+    }
+    .lang-btn {
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .8rem; font-weight: 600;
+      padding: .3rem .9rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+    .lang-btn.active { background: var(--accent); color: #0e1117; border-color: var(--accent); }
+    .lang-btn:not(.active) { color: var(--muted); }
+    .lang-btn:not(.active):hover { border-color: var(--accent); color: var(--accent); }
+
+    /* HEADER */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(200,169,110,.18), transparent 70%);
+      pointer-events: none;
+    }
+    .avatar-ring {
+      width: 88px; height: 88px; border-radius: 50%;
+      border: 2px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.1rem;
+      background: linear-gradient(135deg, #1c2333, #252e42);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--accent);
+    }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 700; color: #fff; margin-bottom: .3rem; letter-spacing: 1px; }
+    .subtitle { font-size: .97rem; color: var(--accent); font-weight: 500; margin-bottom: 1.2rem; }
+    .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.3rem; font-size: .84rem; color: var(--muted); }
+    .contact-row span { display: flex; align-items: center; gap: .35rem; }
+
+    .download-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 1.2rem;
+      padding: .6rem 1.6rem;
+      background: var(--accent);
+      color: #0e1117;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: .85rem;
+      font-family: 'DM Sans', sans-serif;
+      transition: background .2s, transform .15s;
+      position: relative; z-index: 1;
+    }
+    .download-btn:hover { background: #e0bf7e; transform: translateY(-1px); }
+
+    /* PAGE */
+    .page { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; display: grid; grid-template-columns: 1fr 295px; gap: 2rem; }
+    @media(max-width:700px) { .page { grid-template-columns: 1fr; } }
+
+    section { margin-bottom: 2rem; }
+    .section-title { font-family: 'DM Sans', sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: .45rem; margin-bottom: 1.1rem; }
+
+    .profile-text { color: #ccc; font-size: .92rem; line-height: 2; }
+
+    .job { margin-bottom: 1.8rem; position: relative; padding-left: 1rem; }
+    .job::before { content: ''; position: absolute; left: 0; top: 6px; bottom: -1.2rem; width: 2px; background: linear-gradient(to bottom, var(--accent), transparent); }
+    .job:last-child::before { bottom: 0; }
+    .job-dot { position: absolute; left: -5px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+    .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .job-title { font-size: .98rem; font-weight: 700; color: #fff; }
+    .job-period { font-size: .77rem; color: var(--accent2); white-space: nowrap; }
+    .job-org { font-size: .84rem; color: var(--accent); margin: .2rem 0 .55rem; }
+    .job ul { padding-left: 1.1rem; }
+    .job ul li { font-size: .87rem; color: #bbb; margin-bottom: .3rem; line-height: 1.75; }
+
+    .achievement { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start; }
+    .ach-num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 800; color: var(--accent); opacity: .4; line-height: 1; min-width: 2.5rem; }
+    .ach-text { font-size: .87rem; color: #bbb; }
+
+    .tag-grid { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--text); font-size: .77rem; padding: .28rem .65rem; border-radius: 4px; transition: border-color .2s; }
+    .tag:hover { border-color: var(--accent); }
+
+    .lang-item { margin-bottom: .85rem; }
+    .lang-label-row { display: flex; justify-content: space-between; font-size: .84rem; margin-bottom: .28rem; }
+    .lang-label-row span:last-child { color: var(--muted); font-size: .77rem; }
+    .lang-bar-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .lang-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+    .edu-item { margin-bottom: .95rem; }
+    .edu-degree { font-weight: 600; color: #fff; font-size: .9rem; }
+    .edu-inst { font-size: .82rem; color: var(--muted); margin-top: .1rem; }
+
+    .cert-list { list-style: none; }
+    .cert-list li { font-size: .82rem; color: #bbb; padding: .28rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: .5rem; }
+    .cert-list li::before { content: '✦'; color: var(--accent); font-size: .58rem; }
+
+    .skill-chips { display: flex; flex-wrap: wrap; gap: .38rem; }
+    .skill-chip { background: rgba(200,169,110,.08); border: 1px solid rgba(200,169,110,.25); color: var(--accent); font-size: .77rem; padding: .24rem .6rem; border-radius: 3px; }
+
+    .driving-badge { display: inline-block; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: .5rem 1rem; font-size: .82rem; color: var(--text); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+    header { animation: fadeUp .5s ease both; }
+    .main-col { animation: fadeUp .5s .12s ease both; }
+    .sidebar { animation: fadeUp .5s .24s ease both; }
+
+    footer { text-align: center; padding: 1.5rem; font-size: .77rem; color: var(--muted); border-top: 1px solid var(--border); }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF31LBNXP6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LF31LBNXP6');
+    function trackDownload() {
+      gtag('event', 'cv_download', { event_category: 'engagement', event_label: 'CV PDF Download' });
+    }
+  </script>
+</head>
+<body>
+
+<div class="lang-bar">
+  <a href="#" class="lang-btn active">EN — English</a>
+  <a href="../ar/" class="lang-btn">عربي — Arabic</a>
+</div>
+
+<header>
+  <div class="avatar-ring">AA</div>
+  <h1>Antony Ancil</h1>
+  <p class="subtitle">Administration &amp; Facilities Management Professional</p>
+  <div class="contact-row">
+    <span>📍 Kollam, Kerala, India</span>
+    <span>📞 +91 8589895659 / +91 9188800911</span>
+    <span>✉ idivet@gmail.com</span>
+  </div>
+  <a href="Antony_Ancil_CV.pdf" download="Antony_Ancil_CV.pdf" class="download-btn" onclick="trackDownload()">
+    ⬇ Download CV (PDF)
+  </a>
+</header>
+
+<div class="page">
+  <div class="main-col">
+
+    <section>
+      <div class="section-title">Profile</div>
+      <p class="profile-text">Results-driven Administration and Facilities Management professional with over 30 years of international experience, including 20+ years with the Higher Colleges of Technology (UAE). Proven expertise across facilities operations, procurement, finance coordination, asset control, event management, and health &amp; safety compliance. Adept at vendor relations, MEP maintenance coordination, AV/IT support, and infrastructure management. A multilingual team leader known for dependability, attention to detail, and a positive can-do attitude.</p>
+    </section>
+
+    <section>
+      <div class="section-title">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <span class="job-title">Administrator &amp; Assistant Manager</span>
+          <span class="job-period">Oct 2019 — Present</span>
+        </div>
+        <p class="job-org">Delma Industrial Coating Est. / The Farm Story — Abu Dhabi / Kerala</p>
+        <ul>
+          <li>Managed finance administration, infrastructure maintenance, and asset management for two concurrent operations.</li>
+          <li>Coordinated client quotations, customer communication, and project follow-ups, improving service response time.</li>
+          <li>Liaised with banks and financial institutions for all operational and transactional matters.</li>
+          <li>Supervised and coordinated the installation of solar panel systems at The Farm Story, Kerala.</li>
+          <li>Oversaw electrical, plumbing, carpentry, and general maintenance works, ensuring operational continuity.</li>
+          <li>Implemented environmental sustainability and waste management practices.</li>
+          <li>Developed and maintained ISO 9001 documentation including quality manuals, SOPs, and process records.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <span class="job-title">Facilities Officer / Asset Controller / Petty Cash Custodian</span>
+          <span class="job-period">Dec 2007 — Sep 2019</span>
+        </div>
+        <p class="job-org">Higher Colleges of Technology (Madinat Zayed &amp; Ruwais Campuses) — UAE</p>
+        <ul>
+          <li>Managed all aspects of facilities operations for two campuses, including infrastructure, space management, and event support.</li>
+          <li>Served as key liaison between both Western Region Colleges and the central Facilities &amp; Administration Division in Abu Dhabi.</li>
+          <li>Coordinated MEP maintenance with external vendors and contractors, ensuring minimal downtime.</li>
+          <li>Pioneered the set-up of distance learning classrooms linking Madinat Zayed and Ruwais campuses (2008).</li>
+          <li>Maintained comprehensive asset tracking, inventory, and barcoding systems.</li>
+          <li>Supervised fire safety, emergency preparedness, and all campus HSE procedures.</li>
+          <li>Promoted from Administrative Assistant to Facilities Officer, Finance Assistant, Asset Controller, and Services Coordinator.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <span class="job-title">Administrative Assistant</span>
+          <span class="job-period">Sep 1999 — Dec 2007</span>
+        </div>
+        <p class="job-org">Higher Colleges of Technology — Fujairah, UAE</p>
+        <ul>
+          <li>Managed vehicle bookings, staff transport, and field trip logistics.</li>
+          <li>Handled documentation, filing systems, courier services, and inventory management.</li>
+          <li>Supported housing coordination, visa processing, and onboarding of new staff members.</li>
+          <li>Assisted in event coordination and student study tours across the UAE.  </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <span class="job-title">Tour Coordinator / Guide</span>
+          <span class="job-period">1995 — 1999</span>
+        </div>
+        <p class="job-org">Al Ain Camel Safari (Hilton-Based) — UAE</p>
+        <ul>
+          <li>Coordinated tourism operations, desert camping activities, and guided tours across Al Ain and surrounding areas.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-dot"></div>
+        <div class="job-header">
+          <span class="job-title">Sales Executive / Maintenance Coordinator</span>
+          <span class="job-period">1990 — 1994</span>
+        </div>
+        <p class="job-org">Al Tawoos Technical Services / Al Salami Group of Companies — UAE</p>
+        <ul>
+          <li>Handled electrical and A/C maintenance coordination and public relations tasks.</li>
+          <li>Managed para-pharmaceutical sales, dry foods &amp; confectionery, and public relations duties.</li>
+          <li>Participated in International Travel &amp; Tour Operations and the 1993 Dubai Air Show.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Key Achievements</div>
+      <div class="achievement"><span class="ach-num">01</span><span class="ach-text">HCT Fujairah Support Staff Award (2004–2005) — recognised for outstanding contribution to campus operations.</span></div>
+      <div class="achievement"><span class="ach-num">02</span><span class="ach-text">10-Year Contribution Award — Higher Colleges of Technology (2010).</span></div>
+      <div class="achievement"><span class="ach-num">03</span><span class="ach-text">Completed over 20 years of continuous service with the Higher Colleges of Technology across multiple campuses.</span></div>
+      <div class="achievement"><span class="ach-num">04</span><span class="ach-text">Successfully spearheaded distance learning classroom infrastructure connecting two remote campuses (2008).</span></div>
+      <div class="achievement"><span class="ach-num">05</span><span class="ach-text">Supervised and delivered solar energy installation project for The Farm Story, Kerala.</span></div>
+    </section>
+
+  </div>
+
+  <div class="sidebar">
+
+    <section>
+      <div class="section-title">Core Competencies</div>
+      <div class="tag-grid">
+        <span class="tag">Facilities Management</span><span class="tag">Procurement &amp; LPO</span>
+        <span class="tag">Asset Control</span><span class="tag">HSE Compliance</span>
+        <span class="tag">Office Administration</span><span class="tag">Vendor Coordination</span>
+        <span class="tag">Event Management</span><span class="tag">MEP Maintenance</span>
+        <span class="tag">AV Systems</span><span class="tag">IT Support</span>
+        <span class="tag">Fleet Management</span><span class="tag">ISO Documentation</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Languages</div>
+      <div class="lang-item"><div class="lang-label-row"><span>English</span><span>Fluent</span></div><div class="lang-bar-track"><div class="lang-fill" style="width:95%"></div></div></div>
+      <div class="lang-item"><div class="lang-label-row"><span>Malayalam</span><span>Native</span></div><div class="lang-bar-track"><div class="lang-fill" style="width:100%"></div></div></div>
+      <div class="lang-item"><div class="lang-label-row"><span>Hindi</span><span>Fluent</span></div><div class="lang-bar-track"><div class="lang-fill" style="width:90%"></div></div></div>
+      <div class="lang-item"><div class="lang-label-row"><span>Tamil</span><span>Fluent</span></div><div class="lang-bar-track"><div class="lang-fill" style="width:88%"></div></div></div>
+      <div class="lang-item"><div class="lang-label-row"><span>Arabic</span><span>Working</span></div><div class="lang-bar-track"><div class="lang-fill" style="width:60%"></div></div></div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div class="edu-item"><p class="edu-degree">Bachelor of Commerce</p><p class="edu-inst">Vinayaka Missions University, Tamil Nadu, India</p></div>
+      <div class="edu-item"><p class="edu-degree">Diploma in Software Engineering</p><p class="edu-inst">Zenith Training Institute (Kent, UK) — Fujairah, UAE</p></div>
+      <div class="edu-item"><p class="edu-degree">Secondary School Certificate</p><p class="edu-inst">Leo XIII High School, Kerala, India</p></div>
+    </section>
+
+    <section>
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list">
+        <li>IOSH Managing Safely</li>
+        <li>HABC Level 2 Emergency First Aid</li>
+        <li>Basic Fire Fighting Training</li>
+        <li>Excel Advanced Formulas and Functions</li>
+        <li>Excel 2016 Microsoft Office Expert Preparation</li>
+        <li>Child Protection Awareness — British Council</li>
+        <li>Academic Research Foundations — Quantitative</li>
+        <li>Creativity &amp; Innovation Program</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skill-chips">
+        <span class="skill-chip">MS Windows</span><span class="skill-chip">MS Office</span>
+        <span class="skill-chip">Linux</span><span class="skill-chip">Networking</span>
+        <span class="skill-chip">Video Editing</span><span class="skill-chip">Adobe / Pinnacle</span>
+        <span class="skill-chip">AV Systems</span><span class="skill-chip">Android</span>
+        <span class="skill-chip">ISO Docs</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Driving Licences</div>
+      <span class="driving-badge">🚗 Valid Indian &amp; UAE licences — Car, Van, Minibus, Motorcycle</span>
+    </section>
+
+  </div>
+</div>
+
+<footer>Antony Ancil · CV · Kollam, Kerala, India · idivet@gmail.com</footer>
+</body>
+</html>
