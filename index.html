@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Antony Ancil — CV | IT Support &amp; Digital Systems | Administration | AIP Candidate</title>
+<meta name="description" content="Antony Ancil — IT Support, Digital Systems, Administration & Facilities Management. 30+ years UAE experience. Canada AIP candidate. Kollam, Kerala."/>
+<style>
+:root{
+  --navy:#1B3A6B;--gold:#C9A227;--green:#1A6B3A;
+  --light:#F5F8FF;--white:#fff;--gray:#444;--lgray:#777;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f0f2f5;color:var(--gray);}
+
+/* TOP BANNER */
+.top-banner{background:var(--navy);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.top-banner a{color:var(--gold);font-size:12px;font-weight:700;text-decoration:none;padding:4px 12px;border:1px solid var(--gold);border-radius:15px;}
+.top-banner span{color:rgba(255,255,255,0.7);font-size:12px;}
+
+/* MAIN WRAPPER */
+.cv{max-width:860px;margin:20px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.08);}
+
+/* HEADER */
+.cv-header{background:linear-gradient(135deg,var(--navy) 0%,#0d2244 100%);padding:36px 40px;display:flex;align-items:flex-start;gap:28px;}
+.avatar{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--navy);flex-shrink:0;border:3px solid rgba(201,162,39,0.4);}
+.header-info{flex:1;}
+.header-info h1{font-size:28px;font-weight:700;color:#fff;margin-bottom:4px;}
+.header-title{font-size:15px;color:var(--gold);font-weight:700;margin-bottom:12px;}
+.header-sub{font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:14px;line-height:1.5;}
+.contact-row{display:flex;flex-wrap:wrap;gap:14px;}
+.contact-row a,.contact-row span{font-size:12px;color:rgba(255,255,255,0.8);text-decoration:none;display:flex;align-items:center;gap:4px;}
+.contact-row a:hover{color:var(--gold);}
+.aip-badge{display:inline-block;background:rgba(201,162,39,0.2);border:1px solid var(--gold);border-radius:8px;padding:5px 12px;font-size:11px;font-weight:700;color:var(--gold);margin-top:12px;}
+
+/* BODY */
+.cv-body{display:grid;grid-template-columns:1fr 2fr;gap:0;}
+
+/* SIDEBAR */
+.sidebar{background:var(--light);padding:28px 24px;border-right:1px solid #e8ecf4;}
+.sidebar-section{margin-bottom:24px;}
+.sidebar-title{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--gold);}
+
+/* SKILLS */
+.skill-item{font-size:12px;color:var(--gray);padding:4px 0;display:flex;align-items:center;gap:6px;border-bottom:0.5px solid #e5e9f0;}
+.skill-item:last-child{border-bottom:none;}
+.skill-dot{width:7px;height:7px;background:var(--navy);border-radius:50%;flex-shrink:0;}
+.skill-dot.gold{background:var(--gold);}
+.skill-dot.green{background:var(--green);}
+
+/* TECH SKILLS */
+.tech-group{margin-bottom:12px;}
+.tech-label{font-size:10px;font-weight:700;color:var(--navy);letter-spacing:1px;margin-bottom:5px;}
+.tech-tags{display:flex;flex-wrap:wrap;gap:4px;}
+.tag{font-size:10px;padding:3px 8px;border-radius:10px;font-weight:700;}
+.tag-navy{background:var(--navy);color:var(--gold);}
+.tag-green{background:var(--green);color:#fff;}
+.tag-gold{background:rgba(201,162,39,0.15);color:#8B6914;border:1px solid var(--gold);}
+.tag-gray{background:#e8ecf4;color:var(--navy);}
+
+/* LANGUAGES */
+.lang-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:0.5px solid #e5e9f0;font-size:12px;}
+.lang-item:last-child{border-bottom:none;}
+.lang-level{font-size:10px;font-weight:700;padding:2px 7px;border-radius:8px;}
+.lvl-native{background:var(--navy);color:var(--gold);}
+.lvl-fluent{background:var(--green);color:#fff;}
+.lvl-working{background:#e8ecf4;color:var(--navy);}
+
+/* CERTS */
+.cert-item{font-size:11px;color:var(--gray);padding:4px 0;display:flex;align-items:flex-start;gap:6px;border-bottom:0.5px solid #e5e9f0;line-height:1.4;}
+.cert-item:last-child{border-bottom:none;}
+
+/* MAIN CONTENT */
+.main{padding:28px 32px;}
+.section{margin-bottom:28px;}
+.section-title{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:14px;padding-bottom:7px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:8px;}
+
+/* SUMMARY */
+.summary{font-size:13px;line-height:1.75;color:var(--gray);}
+.summary strong{color:var(--navy);}
+
+/* EXPERIENCE */
+.job{margin-bottom:20px;padding-bottom:20px;border-bottom:0.5px solid #e8ecf4;}
+.job:last-child{border-bottom:none;margin-bottom:0;}
+.job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;flex-wrap:wrap;gap:4px;}
+.job-title{font-size:14px;font-weight:700;color:var(--navy);}
+.job-date{font-size:11px;color:var(--lgray);background:#f0f2f5;padding:2px 8px;border-radius:8px;white-space:nowrap;}
+.job-org{font-size:12px;color:var(--green);font-weight:700;margin-bottom:8px;}
+.job-bullets{list-style:none;padding:0;}
+.job-bullets li{font-size:12px;color:var(--gray);padding:3px 0 3px 14px;position:relative;line-height:1.55;}
+.job-bullets li::before{content:"▸";position:absolute;left:0;color:var(--gold);font-size:10px;top:4px;}
+.job-bullets li strong{color:var(--navy);}
+
+/* ACHIEVEMENTS */
+.ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.ach-item{background:var(--light);border-radius:8px;padding:10px 12px;border-left:3px solid var(--gold);font-size:12px;color:var(--gray);line-height:1.5;}
+.ach-item strong{color:var(--navy);display:block;margin-bottom:2px;}
+
+/* EDUCATION */
+.edu-item{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:0.5px solid #e8ecf4;}
+.edu-item:last-child{border-bottom:none;margin-bottom:0;}
+.edu-icon{width:38px;height:38px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.edu-info .degree{font-size:13px;font-weight:700;color:var(--navy);}
+.edu-info .school{font-size:12px;color:var(--green);font-weight:700;}
+.edu-info .year{font-size:11px;color:var(--lgray);margin-top:2px;}
+.edu-modules{margin-top:6px;}
+.edu-modules span{font-size:10px;background:#e8ecf4;color:var(--navy);padding:2px 7px;border-radius:8px;margin:2px 2px 0 0;display:inline-block;}
+
+/* MEDIA SECTION */
+.media-box{background:linear-gradient(135deg,#0d2244,#1B3A6B);border-radius:10px;padding:16px 20px;margin-top:8px;}
+.media-box h4{font-size:12px;font-weight:700;color:var(--gold);margin-bottom:8px;}
+.media-item{font-size:12px;color:rgba(255,255,255,0.8);padding:3px 0 3px 14px;position:relative;line-height:1.5;}
+.media-item::before{content:"▸";position:absolute;left:0;color:var(--gold);font-size:10px;top:4px;}
+
+/* REFERENCES */
+.ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.ref-card{background:var(--light);border-radius:8px;padding:10px 12px;border-top:2px solid var(--navy);}
+.ref-name{font-size:12px;font-weight:700;color:var(--navy);}
+.ref-role{font-size:11px;color:var(--green);margin-top:2px;line-height:1.4;}
+.ref-note{font-size:10px;color:var(--lgray);margin-top:4px;}
+
+/* VG FOOTER */
+.vg-footer{background:var(--navy);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.vg-footer-text{color:rgba(255,255,255,0.7);font-size:11px;}
+.vg-footer-text strong{color:var(--gold);}
+.vg-links{display:flex;gap:10px;flex-wrap:wrap;}
+.vg-links a{font-size:11px;color:var(--gold);text-decoration:none;border:1px solid rgba(201,162,39,0.4);padding:4px 10px;border-radius:10px;}
+
+/* DOWNLOAD BTN */
+.dl-btn{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:8px 18px;border-radius:20px;text-decoration:none;margin-top:10px;}
+
+/* FLOAT */
+.float-back{position:fixed;bottom:24px;left:24px;z-index:999;background:var(--navy);color:var(--gold);border:2px solid var(--gold);border-radius:50px;padding:8px 16px;font-size:12px;font-weight:700;text-decoration:none;}
+
+@media(max-width:640px){
+  .cv-body{grid-template-columns:1fr;}
+  .cv-header{flex-direction:column;}
+  .ach-grid,.ref-grid{grid-template-columns:1fr;}
+  .sidebar{border-right:none;border-bottom:1px solid #e8ecf4;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  <span>⚡ Antony Ancil — IT Support & Digital Systems | Administration Professional</span>
+  <a href="https://venadglobal.github.io">Venad Global Consultancy</a>
+</div>
+
+<div class="cv">
+
+  <!-- HEADER -->
+  <div class="cv-header">
+    <div class="avatar">AA</div>
+    <div class="header-info">
+      <h1>Antony Ancil</h1>
+      <div class="header-title">IT Support &amp; Digital Systems Coordinator &nbsp;|&nbsp; Administration &amp; Facilities Management</div>
+      <div class="header-sub">30+ years international experience · UAE · India · Digital Media · IT Infrastructure</div>
+      <div class="contact-row">
+        <a href="tel:+918589895659">📞 +91 85898 95659</a>
+        <a href="mailto:venadglobal@gmail.com">✉ venadglobal@gmail.com</a>
+        <a href="https://linkedin.com/in/idivet">🔗 linkedin.com/in/idivet</a>
+        <span>📍 Kollam, Kerala, India</span>
+      </div>
+      <div class="aip-badge">🇨🇦 Atlantic Immigration Program (AIP) Candidate — Nova Scotia & Newfoundland</div>
+    </div>
+  </div>
+
+  <div class="cv-body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">TECHNICAL SKILLS</div>
+        <div class="tech-group">
+          <div class="tech-label">OPERATING SYSTEMS</div>
+          <div class="tech-tags">
+            <span class="tag tag-navy">Windows All</span>
+            <span class="tag tag-navy">Linux Mint</span>
+            <span class="tag tag-navy">Ubuntu</span>
+            <span class="tag tag-navy">Android</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">PRODUCTIVITY</div>
+          <div class="tech-tags">
+            <span class="tag tag-gray">MS Office Suite</span>
+            <span class="tag tag-gray">Excel Advanced</span>
+            <span class="tag tag-gray">Google Workspace</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">WEB & DEVELOPMENT</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">HTML / CSS</span>
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">GitHub Pages</span>
+            <span class="tag tag-green">SEO</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">AI & DIGITAL TOOLS</div>
+          <div class="tech-tags">
+            <span class="tag tag-gold">Claude AI</span>
+            <span class="tag tag-gold">ChatGPT</span>
+            <span class="tag tag-gold">MS Copilot</span>
+            <span class="tag tag-gold">Gemini</span>
+            <span class="tag tag-gold">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">MEDIA & AV</div>
+          <div class="tech-tags">
+            <span class="tag tag-gray">Pinnacle Studio</span>
+            <span class="tag tag-gray">Adobe</span>
+            <span class="tag tag-gray">CapCut</span>
+            <span class="tag tag-gray">Audio/Video Editing</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">NETWORKING & SYSTEMS</div>
+          <div class="tech-tags">
+            <span class="tag tag-navy">LAN/WAN Basics</span>
+            <span class="tag tag-navy">Distance Learning Setup</span>
+            <span class="tag tag-navy">AV Systems</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-label">ANALYTICS & SOCIAL</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">Google Analytics</span>
+            <span class="tag tag-green">GBP Management</span>
+            <span class="tag tag-green">YouTube Studio</span>
+            <span class="tag tag-green">Social Media Mgmt</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">ADMINISTRATION SKILLS</div>
+        <div class="skill-item"><div class="skill-dot"></div>Facilities Management</div>
+        <div class="skill-item"><div class="skill-dot"></div>ISO 9001 Quality Systems</div>
+        <div class="skill-item"><div class="skill-dot"></div>Procurement & Asset Control</div>
+        <div class="skill-item"><div class="skill-dot"></div>HSE Compliance</div>
+        <div class="skill-item"><div class="skill-dot"></div>Vendor Management</div>
+        <div class="skill-item"><div class="skill-dot"></div>MEP Maintenance Coord.</div>
+        <div class="skill-item"><div class="skill-dot"></div>Event Management</div>
+        <div class="skill-item"><div class="skill-dot gold"></div>IELTS/OET Exam Logistics</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">LANGUAGES</div>
+        <div class="lang-item"><span>English</span><span class="lang-level lvl-fluent">Fluent</span></div>
+        <div class="lang-item"><span>Malayalam</span><span class="lang-level lvl-native">Native</span></div>
+        <div class="lang-item"><span>Hindi</span><span class="lang-level lvl-fluent">Fluent</span></div>
+        <div class="lang-item"><span>Tamil</span><span class="lang-level lvl-fluent">Fluent</span></div>
+        <div class="lang-item"><span>Arabic</span><span class="lang-level lvl-working">Working</span></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">CERTIFICATIONS</div>
+        <div class="cert-item"><span>🟡</span>IOSH Managing Safely</div>
+        <div class="cert-item"><span>🟢</span>Microsoft Office Expert — Excel Advanced</div>
+        <div class="cert-item"><span>🔴</span>HABC Level 2 Emergency First Aid</div>
+        <div class="cert-item"><span>🟠</span>Basic Fire Fighting — NFPA</div>
+        <div class="cert-item"><span>🔵</span>Child Protection — British Council</div>
+        <div class="cert-item"><span>⚡</span>Diploma in Software Engineering — Zenith/Kent UK</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">DRIVING LICENCES</div>
+        <div class="skill-item"><div class="skill-dot green"></div>India — Valid (current)</div>
+        <div class="skill-item"><div class="skill-dot"></div>UAE — Car, Van, Minibus, Motorcycle</div>
+        <div class="skill-item"><div class="skill-dot gold"></div>Nova Scotia — on arrival 🇨🇦</div>
+      </div>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- SUMMARY -->
+      <div class="section">
+        <div class="section-title">💼 PROFESSIONAL SUMMARY</div>
+        <div class="summary">
+          Versatile IT Support & Digital Systems professional with <strong>30+ years of international experience</strong> combining technical infrastructure, digital media production, and administration. Delivered distance learning systems, managed AV and IT infrastructure across multi-campus environments, and built complete digital platforms independently — including websites, Telegram bots, analytics dashboards, and AI-powered tools — demonstrating hands-on, self-driven technical capability.<br><br>
+          Complemented by <strong>20+ years with the Higher Colleges of Technology (HCT), UAE</strong> in facilities, asset management, and operations. Multilingual across 5 languages. <strong>Diploma in Software Engineering (Kent UK/Fujairah)</strong>. Actively seeking IT Support, Digital Coordination, or Administration roles in Atlantic Canada through the <strong>Atlantic Immigration Program (AIP)</strong>.
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <div class="section-title">📋 PROFESSIONAL EXPERIENCE</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">IT Support & Digital Systems — Self-Directed</div>
+            <div class="job-date">2026 — Present</div>
+          </div>
+          <div class="job-org">Venad Global Consultancy — Kollam, Kerala, India</div>
+          <ul class="job-bullets">
+            <li>Independently designed and deployed a <strong>bilingual English/Arabic professional website</strong> using HTML, CSS, and GitHub Pages — fully responsive, live at venadglobal.github.io.</li>
+            <li>Built a <strong>working Python Telegram bot</strong> for automated client interaction and lead management.</li>
+            <li>Set up and managed <strong>Google Analytics</strong>, Google Business Profile, YouTube Studio, and multi-platform social media ecosystem.</li>
+            <li>Applied <strong>advanced AI tools</strong> (Claude, ChatGPT, Copilot, Gemini) for content generation, prompt engineering, and business automation.</li>
+            <li>Produced professional <strong>MP4 video presentations</strong>, social media graphics, and digital marketing materials.</li>
+            <li>Demonstrated ability to independently research, learn, and implement new digital technologies in a live production environment.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Administrator & Assistant Manager</div>
+            <div class="job-date">Oct 2019 — Present</div>
+          </div>
+          <div class="job-org">Delma Industrial Coating Est. / The Farm Story — UAE & India</div>
+          <ul class="job-bullets">
+            <li>Managed IT systems, finance administration, and infrastructure across concurrent operations in Abu Dhabi and Kerala.</li>
+            <li><strong>Website management and digital catalogue</strong> for The Farm Story — www.thefarmstory.co.in and YouTube channel @thefarmstoryin.</li>
+            <li>E-commerce and WhatsApp commerce — order management, online delivery, customer relationship management.</li>
+            <li>Developed and maintained <strong>ISO 9001 quality documentation</strong> — quality manuals, SOPs, and version-controlled document registers.</li>
+            <li>Supervised solar panel installation project and coordinated agricultural operations for The Farm Story.</li>
+            <li>Ensured full HSE compliance; managed vendor relationships and operational procurement.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Facilities Officer / IT & AV Support / Asset Controller</div>
+            <div class="job-date">Dec 2007 — Sep 2019</div>
+          </div>
+          <div class="job-org">Higher Colleges of Technology — Madinat Zayed & Ruwais Campuses, UAE</div>
+          <ul class="job-bullets">
+            <li><strong>Pioneered distance learning classroom infrastructure</strong> (2008) connecting two remote campuses — early adoption of video-conferencing and digital education delivery systems.</li>
+            <li>Managed and maintained <strong>AV systems, IT infrastructure, and digital equipment</strong> across both campuses.</li>
+            <li>Coordinated <strong>IELTS/OET exam registrations</strong> and managed full test-day IT and logistics for the British Council.</li>
+            <li>Maintained comprehensive <strong>asset tracking, barcoding, and inventory management systems</strong>.</li>
+            <li>Supervised fire safety, emergency preparedness, and HSE compliance procedures.</li>
+            <li>Led full operational setup of the new <strong>Baynounah Educational Complex campus</strong> — commissioning engineering laboratories, health science labs, and complete IT infrastructure from zero to fully operational.</li>
+            <li>Identified critical gap in expatriate education in Madinat Zayed (only one inadequate school available). <strong>Leveraged Ministry of Education and Western Region government relationships</strong> to coordinate a new school — identified NMC founder as investor and achieved full school operations within 2 weeks. Hundreds of expatriate families benefited directly.</li>
+            <li>Progressively promoted: Administrative Assistant → Finance Assistant → Asset Controller → Facilities Officer → Services Coordinator.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Administrative Assistant / IT Support</div>
+            <div class="job-date">Sep 1999 — Dec 2007</div>
+          </div>
+          <div class="job-org">Higher Colleges of Technology — Fujairah Campus, UAE</div>
+          <ul class="job-bullets">
+            <li>Provided IT and administrative support across campus operations.</li>
+            <li>Managed documentation systems, transport logistics, and international staff onboarding.</li>
+          </ul>
+          <!-- MEDIA BOX -->
+          <div class="media-box">
+            <h4>📺 Concurrent — Digital Media Production (Community Volunteer)</h4>
+            <div class="media-item"><strong>Kairali TV (Eastern UAE, 2000–2015):</strong> Audio and video editing for news broadcasting — international Malayalam television channel. 15 years of consistent broadcast media production alongside full-time employment.</div>
+            <div class="media-item"><strong>VHS to DVD/CD Conversion (Fujairah):</strong> Professional audio/video digitisation, editing, and format conversion for the expatriate community.</div>
+            <div class="media-item">Demonstrates sustained technical media skills, community contribution, and self-driven learning during the formative years of digital broadcasting.</div>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Tour Coordinator / Guide</div>
+            <div class="job-date">1995 — 1999</div>
+          </div>
+          <div class="job-org">Al Ain Camel Safari (Hilton-Based) — UAE</div>
+          <ul class="job-bullets">
+            <li>Coordinated tourism operations, desert camping, and guided tours across Al Ain and surrounding areas.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-title">Sales Executive / Maintenance Coordinator</div>
+            <div class="job-date">1990 — 1994</div>
+          </div>
+          <div class="job-org">Al Tawoos Technical Services & Al Salami Group — UAE</div>
+          <ul class="job-bullets">
+            <li>Managed sales, maintenance coordination, and participated in the 1993 Dubai International Air Show.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div class="section">
+        <div class="section-title">🏆 KEY ACHIEVEMENTS</div>
+        <div class="ach-grid">
+          <div class="ach-item"><strong>HCT Support Staff Award 2004–2005</strong>Outstanding contribution to campus operations.</div>
+          <div class="ach-item"><strong>10-Year Long Service Award</strong>Higher Colleges of Technology, UAE — 2010.</div>
+          <div class="ach-item"><strong>Distance Learning Pioneer — 2008</strong>Delivered first video-linked classrooms between two remote HCT campuses.</div>
+          <div class="ach-item"><strong>15 Years Broadcast Media</strong>Audio/video editing for Kairali TV — Eastern UAE region, 2000–2015.</div>
+          <div class="ach-item"><strong>Solar Project &amp; Digital Platform</strong>Solar installation + website, e-commerce &amp; YouTube for The Farm Story, Kerala.</div>
+          <div class="ach-item"><strong>Baynounah Campus Setup</strong>Led full operational setup of new HCT Western Region campus — engineering &amp; health science labs commissioned from scratch.</div>
+          <div class="ach-item"><strong>Community School — Madinat Zayed</strong>Identified expat education gap, leveraged Ministry of Education relations, found investor — full school operations in 2 weeks.</div>
+          <div class="ach-item"><strong>Full Digital Platform — 2026</strong>Built website, Telegram bot, analytics & social media from scratch in weeks.</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-title">🎓 EDUCATION</div>
+        <div class="edu-item">
+          <div class="edu-icon">💻</div>
+          <div class="edu-info">
+            <div class="degree">Diploma in Software Engineering</div>
+            <div class="school">Zenith Training Institute (Kent, UK) — Fujairah, UAE</div>
+            <div class="year">2001 – 2002</div>
+            <div class="edu-modules">
+              <span>Computer Systems & Networking</span>
+              <span>Database Management</span>
+              <span>Internet Technologies</span>
+              <span>Object Oriented Programming</span>
+              <span>Data Analysis & Design</span>
+              <span>Software Development</span>
+              <span>Mathematics & TOEFL</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <div class="degree">Bachelor of Commerce</div>
+            <div class="school">Vinayaka Missions University, Tamil Nadu, India</div>
+            <div class="year">2012 – 2015</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-icon">📚</div>
+          <div class="edu-info">
+            <div class="degree">Secondary School Certificate</div>
+            <div class="school">Leo XIII High School, Kerala, India</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REFERENCES -->
+      <div class="section">
+        <div class="section-title">👥 REFERENCES</div>
+        <div class="ref-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="ref-card">
+            <div class="ref-name">Elizabeth Morey 🇨🇦</div>
+            <div class="ref-role">Former Dean of Students, Concordia University, Montreal · Former Director, HCT Fujairah UAE</div>
+            <div class="ref-note">Available on request</div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-name">Dr. Phil Quirke 🌴</div>
+            <div class="ref-role">Executive Dean & Founding Director, HCT Madinat Zayed & Ruwais · Education Consultant, Tobago</div>
+            <div class="ref-note">Available on request</div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-name">Dr. Robson Chiambiro 🇦🇺</div>
+            <div class="ref-role">Former Senior Faculty HCT UAE · Co-Director, Brisbane Organic Insect Protein, Australia</div>
+            <div class="ref-note">Available on request</div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-name">George Joseph 🇦🇪</div>
+            <div class="ref-role">General Manager, Delma Industrial Coating Est., Abu Dhabi, UAE</div>
+            <div class="ref-note">Available on request</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VG FOOTER -->
+  <div class="vg-footer">
+    <div class="vg-footer-text">
+      <strong>⚡ Venad Global Consultancy</strong> · Kollam, Kerala · Est. 2026<br>
+      Antony also offers honest career guidance — Canada AIP · UK · Nursing · Gulf · Websites
+    </div>
+    <div class="vg-links">
+      <a href="https://venadglobal.github.io">🌐 Website</a>
+      <a href="https://wa.me/918589895659">💬 WhatsApp</a>
+      <a href="https://linkedin.com/in/idivet">🔗 LinkedIn</a>
+    </div>
+  </div>
+
+</div>
+
+<a href="https://venadglobal.github.io" class="float-back">← Venad Global</a>
+
+</body>
+</html>
